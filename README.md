@@ -37,3 +37,13 @@ O sistema utiliza um algoritmo de **Backtracking** para realizar uma busca exaus
 ```bash
 cd backend
 ./mvnw spring-boot:run
+
+## 🚀 Próximos Passos (Melhorias Futuras)
+
+Embora o sistema atenda a todos os requisitos e regras de negócio propostas, a arquitetura foi desenhada pensando em escalabilidade. As seguintes evoluções estão mapeadas para o futuro da aplicação:
+
+* **Testes Unitários no Front-end:** Implementação de suítes de testes para os componentes Vue.js utilizando **Vitest** e Vue Test Utils.
+* **Internacionalização (i18n):** Adição de suporte a múltiplos idiomas na interface utilizando a biblioteca **Vue I18n**, facilitando a adoção em fábricas multinacionais.
+* **Segurança e Autenticação:** Implementação de Spring Security e tokens JWT no back-end para separar os perfis de acesso (ex: Administrador vs. Operador de Máquina).
+* **Evolução do Algoritmo:** Para cenários com milhares de variáveis de insumos e produtos, migrar a lógica de *Backtracking* para modelos de **Programação Linear** (utilizando bibliotecas como Google OR-Tools ou Apache Commons Math) visando máxima performance em tempo real.
+* **Dockerização:** Criação de `Dockerfile` e `docker-compose.yml` para orquestrar os contêineres do banco de dados, da API Spring Boot e do front-end Vue.js, garantindo um ambiente de deploy padronizado.
