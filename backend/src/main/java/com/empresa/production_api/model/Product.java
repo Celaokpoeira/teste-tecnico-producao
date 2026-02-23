@@ -17,7 +17,8 @@ public class Product {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    // CORREÇÃO AQUI: Mudando o nome no banco para evitar conflito de palavra reservada
+    @Column(name = "product_value", nullable = false)
     private Double value;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
